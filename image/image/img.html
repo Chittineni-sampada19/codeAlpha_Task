@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Image Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin: 30px 0 20px;
+      color: #333;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      width: 90%;
+      max-width: 1200px;
+      padding-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 3px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      border-color: #7c4dff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .caption {
+      padding: 10px 15px;
+      font-size: 1rem;
+      color: #555;
+      background: #f9f9f9;
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1><br>
+  <div class="gallery">
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/S/pv-target-images/da2c8e10a113baf0aa1a13717894aa37a735e43c093930edb0a3615d3add1df3.jpg" alt="Fidaa">
+      <div class="caption">Fidaa</div>
+    </div>
+    <div class="card">
+      <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202505/anaganaga-161342709-3x4.jpg?VersionId=jSap28zhSoyOliH4vXF2jW1SbIdOWR8P" alt="Anaganaga">
+      <div class="caption">Anaganaga</div>
+    </div>
+    <div class="card">
+      <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/-bro-et00313690-10-08-2021-04-50-59.jpg" alt="#Bro">
+      <div class="caption">#Bro</div>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2cN-BimnWlxI9TaZTpiryvhwUoqQ6f2rgy8Md7t901nce8_LIpf5lC2zoV-SVNQMGpc&usqp=CAU" alt="Sahoo">
+      <div class="caption">Sahoo</div>
+    </div>
+    <div class="card">
+      <img src="https://images.moviebuff.com/95fa8804-9070-44f3-a9ed-7ea1b82ec1d5?w=500" alt="Raghuvaran B.tech">
+      <div class="caption">Raghuvaran B.tech</div>
+    </div>
+    <div class="card">
+      <img src="https://preview.redd.it/alia-bhatts-jigra-will-be-premiering-on-netflix-on-december-v0-p12c85kw305e1.png?auto=webp&s=5eca842cecbc558f08264702818ee9bcaeea1205" alt="Jigra">
+      <div class="caption">Jigra</div>
+    </div>
+  </div>
+</body>
+</html>
